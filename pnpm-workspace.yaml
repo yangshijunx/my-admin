@@ -1,0 +1,4 @@
+packages:
+  - quarkc-vue
+  - quarkc-component
+  - quarkc-backend
