@@ -1,0 +1,27 @@
+name: "my-admin-action"
+# 任意push都会触发
+on: 
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with: 
+          persist-credentials: false
+      - name: Inatll & Buiild
+        run:
+          cd quarkc-vue
+          npm install
+          npm run build
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v4
+        with:
+          ACCESS_TOKEN: ${{ secrets.MY_ADMIN_KEY }}
+          BRANCH: master # deploy master
+          FOLDER: dist
+          
+      
