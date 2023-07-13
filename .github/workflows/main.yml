@@ -14,7 +14,7 @@ jobs:
           persist-credentials: false
       - name: Inatll & Buiild
         run:
-          cd quarkc-vue
+          ll
           npm install
           npm run build
       - name: Deploy
