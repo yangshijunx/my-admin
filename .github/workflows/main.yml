@@ -1,6 +1,6 @@
 name: "my-admin-action"
 # 任意push都会触发
-on: 
+on:
   push:
     branches:
       - master
@@ -10,10 +10,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with: 
+        with:
           persist-credentials: false
       - name: Inatll & Buiild
-        run:
+        run: |
           ll
           npm install
           npm run build
@@ -23,5 +23,3 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.MY_ADMIN_KEY }}
           BRANCH: master # deploy master
           FOLDER: dist
-          
-      
