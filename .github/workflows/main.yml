@@ -22,4 +22,4 @@ jobs:
         with:
           ACCESS_TOKEN: ${{ secrets.MY_ADMIN_KEY }}
           BRANCH: gh-pages # deploy master
-          FOLDER: dist
+          FOLDER: quarkc-vue/dist # deploy folder
