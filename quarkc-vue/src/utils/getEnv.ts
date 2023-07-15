@@ -20,6 +20,7 @@ export function wrapperEnv(envConifg: Recordable): ImportMetaEnv {
         throw new Error('VITE_PROXY config wrong')
       }
     }
+    res[envKey] = realName
   }
   return res
 }
