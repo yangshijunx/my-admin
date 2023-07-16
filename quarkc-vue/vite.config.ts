@@ -8,9 +8,10 @@ import { wrapperEnv } from './src/utils/getEnv'
 export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
   const env = loadEnv(mode, process.cwd())
   const viteEnv = wrapperEnv(env)
+  console.log(viteEnv)
   return {
     publicDir: viteEnv.VITE_PUBLIC_PATH,
-    base: './',
+    base: viteEnv.VITE_BASE,
     plugins: [vue(), vueJsx()],
     resolve: {
       alias: {
