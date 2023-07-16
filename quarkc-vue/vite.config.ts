@@ -56,6 +56,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
           chunkFileNames: 'assets/js/[name]-[hash].js',
           entryFileNames: 'assets/js/[name]-[hash].js',
           assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
+          // 参考链接 https://github.com/vitejs/vite/issues/9119
           sanitizeFileName(name) {
             const match = DRIVE_LETTER_REGEX.exec(name)
             const driveLetter = match ? match[0] : ''
