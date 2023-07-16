@@ -7,6 +7,8 @@ import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/reset.css'
 // pinia store
 import pinia from '@/stores/index'
+// 打印环境变量
+console.log('环境变量', import.meta.env)
 
 const app = createApp(App)
 
