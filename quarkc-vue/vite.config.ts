@@ -4,6 +4,10 @@ import { defineConfig, ConfigEnv, UserConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { wrapperEnv } from './src/utils/getEnv'
+
+const INVALID_CHAR_REGEX = /[\x00-\x1F\x7F<>*#"{}|^[\]`;?:&=+$,]/g
+const DRIVE_LETTER_REGEX = /^[a-z]:/i
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
   const env = loadEnv(mode, process.cwd())
@@ -50,7 +54,13 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
           // Static resource classification and packaging
           chunkFileNames: 'assets/js/[name]-[hash].js',
           entryFileNames: 'assets/js/[name]-[hash].js',
-          assetFileNames: 'assets/[ext]/[name]-[hash].[ext]'
+          assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
+          sanitizeFileName(name) {
+            const match = DRIVE_LETTER_REGEX.exec(name)
+            const driveLetter = match ? match[0] : ''
+            // substr 是被淘汰語法，因此要改 slice
+            return driveLetter + name.slice(driveLetter.length).replace(INVALID_CHAR_REGEX, '')
+          }
         }
       }
     }
