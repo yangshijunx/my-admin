@@ -1,0 +1,1 @@
+import{_ as e}from"./plugin-vueexport-helper-c27b6911.js";import{o as c,c as o}from"./index-ce77a176.js";const r={};function t(n,_){return c(),o("div",null,"404页面")}const f=e(r,[["render",t]]);export{f as default};
