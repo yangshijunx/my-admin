@@ -7,7 +7,7 @@ export const globalStore = defineStore({
   id: 'globalStore',
   // state 数据存放
   state: (): GlobalStore => ({
-    token: 'ceshi1',
+    token: '',
     userInfo: {}
   }),
   getters: {

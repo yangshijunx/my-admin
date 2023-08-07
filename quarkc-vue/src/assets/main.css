@@ -1,7 +1,8 @@
 @import './base.css';
+@import './css/tailwind.css';
 
 #app {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 2rem;
 
@@ -26,10 +27,11 @@ a,
     display: flex;
     place-items: center;
   }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+}
+/* 字体 SmileySans-Oblique 得意黑 */
+@font-face {
+  font-family: 'SmileySans-Oblique';
+  src: url('@/assets/font/SmileySans-Oblique.ttf');
+  font-weight: normal;
+  font-style: normal;
 }
