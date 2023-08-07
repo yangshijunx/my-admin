@@ -10,7 +10,7 @@ import LeftSide from './components/leftSide.vue'
 import LoginForm from './components/loginForm.vue'
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .login-body {
   display: flex;
   justify-content: space-between;

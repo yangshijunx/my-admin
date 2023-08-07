@@ -6,7 +6,7 @@
 
 <script setup lang="ts"></script>
 
-<style scoped lang="less">
+<style scoped lang="scss">
 .left-side {
   width: 50%;
   display: flex;

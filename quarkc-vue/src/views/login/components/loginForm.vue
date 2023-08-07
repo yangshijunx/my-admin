@@ -7,7 +7,7 @@
 
 <script setup lang="ts"></script>
 
-<style scoped lang="less">
+<style scoped lang="scss">
 .login-form {
   width: 50%;
   padding: 40px 40px 40px 120px;
@@ -15,6 +15,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  min-width: 560px;
   &-welcome {
     font-size: 30px;
     font-family: SmileySans-Oblique;

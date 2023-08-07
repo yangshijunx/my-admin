@@ -23,6 +23,13 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
         '@': fileURLToPath(new URL('./src', import.meta.url))
       }
     },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: ``
+        }
+      }
+    },
     server: {
       host: '0.0.0.0',
       open: viteEnv.VITE_OPEN,
