@@ -1,0 +1,29 @@
+.ant-input {
+  background-color: transparent;
+  border: none;
+}
+:deep(.ant-input-password) {
+  background-color: transparent;
+  border: none;
+  .ant-input {
+    background-color: transparent;
+  }
+}
+// 取消激活样式
+.ant-input:focus,
+.ant-input:hover,
+.ant-input-active {
+  border: none;
+  box-shadow: none;
+}
+// 取消ant-input-password的激活样式
+.ant-input-password:focus,
+.ant-input-password:hover,
+.ant-input-password-active {
+  border: none;
+  box-shadow: none;
+}
+.ant-input-affix-wrapper {
+  border: none;
+  box-shadow: none;
+}

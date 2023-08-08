@@ -1,11 +1,11 @@
 @import './base.css';
 @import './css/tailwind.css';
+/* 引入阿里font */
+@import './font/aliFont/iconfont.css';
 
 #app {
   /* max-width: 1280px; */
-  margin: 0 auto;
-  padding: 2rem;
-
+  margin: auto;
   font-weight: normal;
 }
 
@@ -22,11 +22,8 @@ a,
   }
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+body {
+  display: flex;
 }
 /* 字体 SmileySans-Oblique 得意黑 */
 @font-face {

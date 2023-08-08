@@ -6,7 +6,7 @@ import { RouterView } from 'vue-router'
   <a-config-provider
     :theme="{
       token: {
-        colorPrimary: '#00b96b'
+        colorPrimary: '#0490f3'
       }
     }"
   >
