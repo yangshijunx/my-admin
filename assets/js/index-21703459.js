@@ -1,0 +1,1 @@
+import{_ as e}from"./plugin-vueexport-helper-c27b6911.js";import{o as t,c}from"./index-7b644d65.js";const o={};function r(n,s){return t(),c("div",null,"test页面")}const f=e(o,[["render",r]]);export{f as default};
