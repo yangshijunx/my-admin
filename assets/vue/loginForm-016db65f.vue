@@ -28,7 +28,7 @@
             :rules="[{ required: true, message: 'Please input your password!' }]"
           >
             <div class="login-form-item-title">Password</div>
-            <a-input-password v-model:value="loginForm.password" />
+            <a-input-password v-model:value="loginForm.password" autocomplete />
           </a-form-item>
         </div>
       </a-form>
@@ -82,7 +82,7 @@ let loginForm = reactive({
   remember: false
 })
 const getImageUrl = (url: string) => {
-  console.log('处理图片路径', import.meta.url)
+  // console.log('处理图片路径', import.meta.url)
   return new URL(`../../../${url}`, import.meta.url).href
 }
 </script>
