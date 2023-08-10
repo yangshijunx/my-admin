@@ -1,0 +1,1 @@
+import o from"./leftSide-4c2eafb0.js";import t from"./loginForm-b91ffc11.js";import{d as _,o as n,c as s,a as e}from"./index-148b77ab.js";import{_ as r}from"./plugin-vueexport-helper-c27b6911.js";const a={class:"login-body"},c=_({__name:"index",setup(d){return(i,p)=>(n(),s("div",a,[e(o),e(t)]))}});const u=r(c,[["__scopeId","data-v-79fdb376"]]);export{u as default};

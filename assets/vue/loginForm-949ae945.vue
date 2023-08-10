@@ -35,7 +35,7 @@
     </div>
     <div class="login-form-remember margin-b-20">
       <a-radio v-model:checked="loginForm.remember">Remember Me</a-radio>
-      <div>Forget Password</div>
+      <div class="forget-password">Forget Password</div>
     </div>
     <div class="login-form-foot margin-b-20">
       <a-button class="margin-r-40" shape="round" type="primary">Login Now</a-button>
@@ -161,6 +161,9 @@ const getImageUrl = (url: string) => {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .forget-password {
+    cursor: pointer;
   }
   &-foot {
     width: 100%;
