@@ -15,6 +15,14 @@ export const staticRoutes: RouteRecordRaw[] = [
     meta: {
       title: '登录'
     }
+  },
+  {
+    path: '/fragment',
+    name: 'fragment',
+    component: () => import('@/views/fragment/index.vue'),
+    meta: {
+      title: '碎片组件'
+    }
   }
 ]
 

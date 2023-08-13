@@ -42,7 +42,7 @@ class HttpRequest {
         let globalData = globalStore()
         globalData.setLoading(false)
         checkStatus(response)
-        return response
+        return response.data
       },
       (error: AxiosError) => {
         // 隐藏全局loading

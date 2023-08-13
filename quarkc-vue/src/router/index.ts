@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import { staticRoutes, errorRoute } from './modules/staticRouter'
 import NProgress from '@/config/nprogress'
 import { globalStore } from '@/stores'
@@ -6,7 +6,9 @@ import { authStore } from '@/stores/modules/auth'
 import { initDynamicRoutes } from '@/router/modules/dynamicRouter'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  // history: createWebHistory(import.meta.env.BASE_URL),
+  // 改为hash模式
+  history: createWebHashHistory(),
   routes: [...staticRoutes, ...errorRoute],
   strict: false,
   scrollBehavior: () => ({ left: 0, top: 0 })
