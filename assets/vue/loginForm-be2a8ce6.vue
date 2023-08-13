@@ -67,6 +67,7 @@
 <script setup lang="ts">
 import { reactive, ref, toRaw } from 'vue'
 import { loginApi } from '@/api/login'
+import { globalStore } from '@/stores'
 const icons = [
   {
     id: 1,
@@ -93,6 +94,7 @@ const getImageUrl = (url: string) => {
   // console.log('处理图片路径', import.meta.url)
   return new URL(`../../../${url}`, import.meta.url).href
 }
+const globalStoreData = globalStore()
 const loginFormRef = ref()
 const loginNow = () => {
   console.log('还没点击就执行了')
@@ -102,6 +104,11 @@ const loginNow = () => {
       loginApi(toRaw(loginForm))
         .then((res: any) => {
           console.log('res', res)
+          if (res.code === 0) {
+            globalStoreData.setToken(res.data.userInfo.token)
+          } else {
+            console.log('登录失败')
+          }
         })
         .catch((error: any) => {
           console.log('error', error)
