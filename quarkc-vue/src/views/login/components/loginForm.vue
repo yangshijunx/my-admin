@@ -19,7 +19,7 @@
             :rules="[{ required: true, message: 'Please input your username!' }]"
           >
             <div class="login-form-item-title">Email Address</div>
-            <a-input v-model:value="loginForm.username" />
+            <a-input placeholder="admin" v-model:value="loginForm.username" />
           </a-form-item>
         </div>
         <div class="login-form-item login-form-password">
@@ -29,7 +29,11 @@
             :rules="[{ required: true, message: 'Please input your password!' }]"
           >
             <div class="login-form-item-title">Password</div>
-            <a-input-password v-model:value="loginForm.password" autocomplete />
+            <a-input-password
+              placeholder="123456"
+              v-model:value="loginForm.password"
+              autocomplete
+            />
           </a-form-item>
         </div>
       </a-form>
