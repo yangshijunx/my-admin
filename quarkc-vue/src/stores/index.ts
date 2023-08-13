@@ -8,7 +8,9 @@ export const globalStore = defineStore({
   // state 数据存放
   state: (): GlobalStore => ({
     token: '',
-    userInfo: {}
+    userInfo: {},
+    loading: false,
+    loadingText: '加载中请稍后...'
   }),
   getters: {
     getToken(): string {
@@ -16,6 +18,12 @@ export const globalStore = defineStore({
     },
     getUserInfo(): any {
       return this.userInfo
+    },
+    getLoading(): boolean {
+      return this.loading
+    },
+    getLoadingText(): string {
+      return this.loadingText
     }
   },
   actions: {
@@ -24,6 +32,12 @@ export const globalStore = defineStore({
     },
     setUserInfo(userInfo: any): void {
       this.userInfo = userInfo
+    },
+    setLoading(loading: boolean): void {
+      this.loading = loading
+    },
+    setLoadingText(loadingText: string): void {
+      this.loadingText = loadingText
     }
   }
 })

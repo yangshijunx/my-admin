@@ -4,6 +4,7 @@
     <div class="login-form-motto margin-b-40">不积跬步，无以至千里；不积小流，无以成江海。🔔</div>
     <div class="login-form-box margin-b-20">
       <a-form
+        ref="loginFormRef"
         :model="loginForm"
         name="basic"
         hideRequiredMark
@@ -38,7 +39,9 @@
       <div class="forget-password">Forget Password</div>
     </div>
     <div class="login-form-foot margin-b-20">
-      <a-button class="margin-r-40" shape="round" type="primary">Login Now</a-button>
+      <a-button class="margin-r-40" shape="round" type="primary" v-debounce="loginNow"
+        >Login Now</a-button
+      >
       <a-button shape="round" type="primary" class="white-button">Create Account</a-button>
     </div>
     <div class="login-form-other">
@@ -58,7 +61,8 @@
 </template>
 
 <script setup lang="ts">
-import { reactive } from 'vue'
+import { reactive, ref, toRaw } from 'vue'
+import { loginApi } from '@/api/login'
 const icons = [
   {
     id: 1,
@@ -84,6 +88,24 @@ let loginForm = reactive({
 const getImageUrl = (url: string) => {
   // console.log('处理图片路径', import.meta.url)
   return new URL(`../../../${url}`, import.meta.url).href
+}
+const loginFormRef = ref()
+const loginNow = () => {
+  console.log('还没点击就执行了')
+  loginFormRef.value
+    .validate()
+    .then(() => {
+      loginApi(toRaw(loginForm))
+        .then((res: any) => {
+          console.log('res', res)
+        })
+        .catch((error: any) => {
+          console.log('error', error)
+        })
+    })
+    .catch((error: any) => {
+      console.log('error', error)
+    })
 }
 </script>
 

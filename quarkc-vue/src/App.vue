@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { Spin } from 'ant-design-vue'
 import { RouterView } from 'vue-router'
+import { globalStore } from '@/stores'
+const globalStoreData = globalStore()
 </script>
 
 <template>
@@ -10,8 +13,25 @@ import { RouterView } from 'vue-router'
       }
     }"
   >
-    <RouterView />
+    <Spin
+      :spinning="globalStoreData.getLoading"
+      size="large"
+      :tip="globalStoreData.getLoadingText"
+      class="global-loading"
+    >
+      <RouterView />
+    </Spin>
   </a-config-provider>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+.ant-spin-nested-loading {
+  height: 100%;
+  :deep(.ant-spin-container) {
+    height: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+</style>

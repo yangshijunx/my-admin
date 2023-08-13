@@ -33,11 +33,11 @@ export const authStore = defineStore({
     },
     async setAuthButtonList() {
       const { data } = await getAuthButtonListApi()
-      this.authButtonList = data
+      this.authButtonList = data as any
     },
     async setAuthMenuList() {
       const { data } = await getAuthdynamicRouterApi()
-      this.authMenuList = data
+      this.authMenuList = data as any
     }
   }
 })

@@ -20,6 +20,12 @@ import LoginForm from './components/loginForm.vue'
   width: 90vw;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-width: 700px;
+  // 居中
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, 5%);
 }
 body {
   background-color: #ebedf0;
