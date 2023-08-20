@@ -1,1 +1,0 @@
-import{_ as n,o as t,c,F as o,b as e}from"./index-46cc1710.js";const s={},a=e("div",null,"1",-1),r=e("div",null,"1",-1);function _(l,d){return t(),c(o,null,[a,r],64)}const f=n(s,[["render",_]]);export{f as default};
