@@ -1,0 +1,1 @@
+import{_ as s,o as t,c as _,p as o,h as c,b as d}from"./index-b4028673.js";const a="/my-admin/assets/svg/left-side-9fe227af.svg";const n={},i=e=>(o("data-v-3ef1deb5"),e=e(),c(),e),f={class:"left-side"},p=i(()=>d("img",{src:a,alt:""},null,-1)),r=[p];function l(e,m){return t(),_("div",f,r)}const u=s(n,[["render",l],["__scopeId","data-v-3ef1deb5"]]);export{u as default};
