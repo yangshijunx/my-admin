@@ -38,6 +38,7 @@ router.beforeEach(async (to, from, next) => {
   const auth = authStore()
   // 判断是否有菜单权限
   auth.setRouteName(to.name as string)
+  console.log('auth.getAuthMenuList', auth.getAuthMenuList)
   if (auth.getAuthMenuList.length === 0) {
     await initDynamicRoutes()
     return next({ ...to, replace: true })
