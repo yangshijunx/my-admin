@@ -123,6 +123,9 @@ importers:
 
   quarkc-vue:
     dependencies:
+      '@ant-design/icons-vue':
+        specifier: ^6.1.0
+        version: 6.1.0(vue@3.3.4)
       ant-design-vue:
         specifier: 4.x
         version: 4.0.0(vue@3.3.4)
