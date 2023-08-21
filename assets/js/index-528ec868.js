@@ -1,1 +1,0 @@
-import o from"./leftSide-27a0eafa.js";import _ from"./loginForm-fed664c2.js";import{d as t,o as n,c as s,a as e,_ as a}from"./index-b4028673.js";const c={class:"login-body"},d=t({__name:"index",setup(r){return(i,p)=>(n(),s("div",c,[e(o),e(_)]))}});const x=a(d,[["__scopeId","data-v-ad2c1268"]]);export{x as default};
