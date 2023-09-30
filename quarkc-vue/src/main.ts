@@ -9,7 +9,7 @@ import 'ant-design-vue/dist/reset.css'
 import pinia from '@/stores/index'
 import directives from '@/directives/index'
 // 打印环境变量
-// console.log('环境变量', import.meta.env)
+console.log('环境变量', import.meta.env)
 
 const app = createApp(App)
 

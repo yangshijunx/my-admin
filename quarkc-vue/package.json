@@ -5,6 +5,7 @@
   "homepage": "https://github.com/yangshijunx/my-admin",
   "scripts": {
     "dev": "vite",
+    "dev:local": "vite --mode localdev",
     "build": "run-p type-check build-only",
     "build:github": "rimraf dist && vite build --mode github",
     "preview": "vite preview",

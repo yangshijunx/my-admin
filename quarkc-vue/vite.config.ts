@@ -36,9 +36,9 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
       cors: true,
       proxy: {
         '/api': {
-          target: 'www.api.api.com',
+          target: 'http://localhost:3000/api/v1',
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api/, '')
+          rewrite: (path) => path.replace(/^\/api/, '/api/v1')
         }
       }
     },

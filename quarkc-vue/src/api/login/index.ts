@@ -16,5 +16,5 @@ export const getAuthdynamicRouterApi = () => {
   return http.post('/auth/getAuthdynamicRouter')
 }
 export const loginApi = (params: any) => {
-  return http.post('/login', params)
+  return http.post('/user/login', params)
 }
