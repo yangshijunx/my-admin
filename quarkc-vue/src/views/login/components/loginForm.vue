@@ -104,7 +104,7 @@ const loginNow = () => {
       loginApi(toRaw(loginForm))
         .then((res: any) => {
           console.log('res', res)
-          if (res.code === 0) {
+          if (res.code === 200) {
             globalStoreData.setToken(res.data.userInfo.token)
           } else {
             console.log('登录失败')
